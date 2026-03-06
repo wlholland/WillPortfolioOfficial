@@ -131,6 +131,14 @@ body {
   text-decoration: underline;
 }
 
+.btn-secondary {
+  color: var(--text-muted);
+}
+
+.btn-secondary:hover {
+  color: var(--text);
+}
+
 /* Footer */
 footer {
   padding: 2rem 0;

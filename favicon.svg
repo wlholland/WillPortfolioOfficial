@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- toolbox body -->
+  <rect x="2" y="14" width="28" height="16" rx="2" ry="2" fill="#2563eb"/>
+  <!-- lid -->
+  <rect x="6" y="10" width="20" height="6" rx="1" ry="1" fill="#1d4ed8"/>
+  <!-- handle -->
+  <path d="M12 10 V7 Q12 4 16 4 Q20 4 20 7 V10" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- latch -->
+  <rect x="13" y="20" width="6" height="4" rx="1" ry="1" fill="#93c5fd"/>
+</svg>
