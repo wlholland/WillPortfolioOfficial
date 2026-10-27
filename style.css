@@ -44,11 +44,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.hero .tagline {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
 /* Projects section */
 .projects {
   padding: 3rem 0;
@@ -111,6 +106,7 @@ body {
 }
 
 .card {
+  position: relative;
   flex: 0 0 calc((100% - 1.25rem) / 2);
   scroll-snap-align: start;
   background: var(--bg-card);
@@ -191,7 +187,17 @@ body {
   text-decoration: underline;
 }
 
+/* The main link covers the whole card so clicking anywhere opens it */
+.card .btn:not(.btn-secondary)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
 .btn-secondary {
+  position: relative;
+  z-index: 1;
   color: var(--text-muted);
 }
 
@@ -199,23 +205,27 @@ body {
   color: var(--text);
 }
 
-/* Footer */
-footer {
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
+/* Hero links */
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
 }
 
-footer a {
-  color: var(--text-muted);
+.link-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  color: var(--text);
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.15s, color 0.15s;
 }
 
-footer a:hover {
+.link-btn:hover {
+  border-color: var(--accent);
   color: var(--accent);
-}
-
-.footer-sep {
-  color: var(--border);
-  margin: 0 0.5rem;
 }
