@@ -17,12 +17,35 @@
 
   <main class="container">
     <section class="projects">
-      <h2>Projects</h2>
+      <div class="projects-header">
+        <h2>Projects</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" type="button" data-dir="-1" aria-label="Previous project">&larr;</button>
+          <button class="carousel-btn" type="button" data-dir="1" aria-label="Next project">&rarr;</button>
+        </div>
+      </div>
       <div class="cards">
 
         <article class="card">
           <div class="card-body">
+            <h3>Post-Mission Planner</h3>
+            <img class="card-image" src="images/post-mission-planner.webp" alt="Post Mission Planner app showing the home, calendar, and goals screens" loading="lazy" />
+            <p>A personal planner for life after the mission — daily schedule, goals, people tracking, and calendar integrations. Marketing site built with Next.js and Tailwind.</p>
+            <div class="badges">
+              <span class="badge">Next.js</span>
+              <span class="badge">React</span>
+              <span class="badge">Tailwind</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://postmissionplanner.com" target="_blank" rel="noopener" class="btn">Live site &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
             <h3>FreeRoomFinder</h3>
+            <img class="card-image" src="images/freeroomfinder.png" alt="FreeRoomFinder building and time-range search" loading="lazy" />
             <p>Find unoccupied classrooms at BYU for any day and time window. Great for grabbing a quiet study space or an open room for a group meeting.</p>
             <div class="badges">
               <span class="badge">Python</span>
@@ -52,35 +75,6 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-body">
-            <h3>Post-Mission Planner</h3>
-            <p>A personal planner for life after the mission — daily schedule, goals, people tracking, and calendar integrations. Marketing site built with Next.js and Tailwind.</p>
-            <div class="badges">
-              <span class="badge">Next.js</span>
-              <span class="badge">React</span>
-              <span class="badge">Tailwind</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="https://postmissionplanner.com" target="_blank" rel="noopener" class="btn">Live site &rarr;</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-body">
-            <h3>Homelab Server</h3>
-            <p>Self-hosted services on an Ubuntu server — Docker containers for speech-to-text transcription, a lecture study-notes app backed by Ollama, all served tailnet-only over Tailscale.</p>
-            <div class="badges">
-              <span class="badge">Ubuntu</span>
-              <span class="badge">Docker</span>
-              <span class="badge">Tailscale</span>
-              <span class="badge">FastAPI</span>
-              <span class="badge">Ollama</span>
-            </div>
-          </div>
-        </article>
-
       </div>
     </section>
   </main>
@@ -94,5 +88,27 @@
       <a href="https://byu.joinhandshake.com/profiles/willhollandit" target="_blank" rel="noopener">Handshake</a>
     </div>
   </footer>
+  <script>
+    const track = document.querySelector('.cards');
+    const buttons = document.querySelectorAll('.carousel-btn');
+
+    function updateButtons() {
+      const max = track.scrollWidth - track.clientWidth - 1;
+      buttons[0].disabled = track.scrollLeft <= 0;
+      buttons[1].disabled = track.scrollLeft >= max;
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = track.querySelector('.card');
+        const step = card.offsetWidth + parseFloat(getComputedStyle(track).columnGap);
+        track.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+      });
+    });
+
+    track.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+  </script>
 </body>
 </html>

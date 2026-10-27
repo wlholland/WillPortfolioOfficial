@@ -25,6 +25,7 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -54,28 +55,87 @@ body {
   flex: 1;
 }
 
+.projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
 .projects h2 {
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
+  flex: 0 0 calc((100% - 1.25rem) / 2);
+  scroll-snap-align: start;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   transition: border-color 0.15s;
+}
+
+@media (max-width: 640px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 .card:hover {
