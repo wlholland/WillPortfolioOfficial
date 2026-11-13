@@ -1,15 +1,15 @@
 // Offline support: precache the whole site so it runs with no Wi-Fi (career-fair table).
 // Regenerate the list + bump VERSION when files change: node scripts/build-sw.mjs
-const VERSION = "wh-202611132057";
+const VERSION = "wh-202611132119";
 const PRECACHE = [
   "/",
   "/assets/css/present.css",
   "/assets/css/site.css",
   "/assets/fonts/inter-latin.woff2",
   "/assets/img/doorway.webp",
+  "/assets/img/freeroomfinder.webp",
   "/assets/img/lab-classnotes.webp",
   "/assets/img/lab-library-flashcards.webp",
-  "/assets/img/lab-library.webp",
   "/assets/img/lab-minecraft.webp",
   "/assets/img/pmp-goals.webp",
   "/assets/img/pmp-home.webp",
@@ -32,16 +32,15 @@ self.addEventListener("activate", (e) => {
 });
 self.addEventListener("fetch", (e) => {
   const req = e.request;
-  if (req.method !== "GET" || new URL(req.url).origin !== location.origin) return;
-  if (req.mode === "navigate") {
-    // Pages: fresh when online, cached when not.
-    e.respondWith(fetch(req).then((res) => { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); return res; })
-      .catch(() => caches.match(req, { ignoreSearch: true }).then((r) => r || caches.match("/"))));
+  const url = new URL(req.url);
+  if (req.method !== "GET" || url.origin !== location.origin) return;
+  const put = (res) => { if (res.ok) { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); } return res; };
+  // Images + fonts rarely change: cache first.
+  if (/\.(webp|png|svg|woff2)$/.test(url.pathname)) {
+    e.respondWith(caches.match(req, { ignoreSearch: true }).then((hit) => hit || fetch(req).then(put)));
     return;
   }
-  // Assets: cache first, refresh in the background.
-  e.respondWith(caches.match(req).then((hit) => {
-    const net = fetch(req).then((res) => { if (res.ok) { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); } return res; }).catch(() => hit);
-    return hit || net;
-  }));
+  // Pages, CSS, JS: always fresh when online; cached copy only when offline.
+  e.respondWith(fetch(req).then(put).catch(() =>
+    caches.match(req, { ignoreSearch: true }).then((hit) => hit || (req.mode === "navigate" ? caches.match("/") : Response.error()))));
 });

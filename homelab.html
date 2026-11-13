@@ -11,8 +11,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=202611132119">
+  <script src="/assets/js/site.js?v=202611132119" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -21,7 +21,7 @@
     <nav class="site-nav" aria-label="Sections">
       <a href="/#work">Work</a>
       <a href="/homelab.html" aria-current="page">Homelab</a>
-      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
       <a class="keep" href="/#contact">Contact</a>
     </nav>
   </div>
@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <div class="rule" style="margin-top:40px"><p class="label accent">Services</p><p class="label">06 running</p></div>
+  <div class="rule" style="margin-top:40px"><p class="label accent">Services</p><p class="label">05 running</p></div>
 
   <article class="lab reveal">
     <img class="shot" src="/assets/img/lab-classnotes.webp" alt="Class Notes home screen with one-tap class buttons" loading="lazy" width="1400" height="875">
@@ -54,7 +54,7 @@
     <div>
       <p class="label">02 &nbsp; Study Library</p>
       <h3 style="margin:12px 0 12px">A home for the study tools I make with Claude.</h3>
-      <p class="body">Flashcards and quizzes I generate with Claude run here in a sandbox. The library implements Claude’s artifact storage API itself, so progress syncs across devices, and it tracks a daily streak. Everything is committed to GitHub every night.</p>
+      <p class="body">Flashcards and quizzes I generate with Claude run here in a sandbox. The library implements Claude’s artifact storage API itself, so progress syncs across devices. It tracks real study time (idle tabs don’t count) as a daily streak and heatmap, and commits everything to GitHub every night.</p>
       <ul class="tags"><li>FastAPI</li><li>SQLite</li><li>JavaScript</li><li>CSP sandbox</li><li>cron + git</li></ul>
     </div>
   </article>
@@ -70,19 +70,9 @@
   </article>
 
   <article class="lab reveal">
-    <img class="shot" src="/assets/img/lab-library.webp" alt="Study streak and activity heatmap" loading="lazy" width="1400" height="875">
+    <div class="text-only flow"><span>Canvas LMS</span><i>↓ daily sync (n8n)</i><span>SQLite</span><i>↓</i><span>Dashboard &nbsp;·&nbsp; MCP server for AI</span></div>
     <div>
-      <p class="label">04 &nbsp; Study tracking</p>
-      <h3 style="margin:12px 0 12px">Streaks based on real study time.</h3>
-      <p class="body">Only active time counts. Idle tabs don’t. It rolls up into a daily streak, an 18-week heatmap, and a plain report in Git every night.</p>
-      <ul class="tags"><li>Activity tracking</li><li>Data visualization</li></ul>
-    </div>
-  </article>
-
-  <article class="lab reveal">
-    <div class="text-only">Canvas → n8n → SQLite → dashboard + MCP</div>
-    <div>
-      <p class="label">05 &nbsp; Canvas dashboard</p>
+      <p class="label">04 &nbsp; Canvas dashboard</p>
       <h3 style="margin:12px 0 12px">Never miss a due date.</h3>
       <p class="body">A daily n8n job syncs my BYU Canvas assignments into a private dashboard, and an MCP server lets an AI assistant answer “what’s due this week?” from the same data.</p>
       <ul class="tags"><li>n8n</li><li>FastAPI</li><li>SQLite</li><li>MCP</li></ul>
@@ -90,9 +80,9 @@
   </article>
 
   <article class="lab reveal">
-    <div class="text-only">Phone / PC dictation → private Whisper server</div>
+    <div class="text-only flow"><span>Phone &nbsp;·&nbsp; Windows PC</span><i>↓ over Tailscale</i><span>Whisper server (local)</span><i>↓</i><span>Text that never leaves the network</span></div>
     <div>
-      <p class="label">06 &nbsp; Speech-to-text</p>
+      <p class="label">05 &nbsp; Speech-to-text</p>
       <h3 style="margin:12px 0 12px">Dictation without the cloud.</h3>
       <p class="body">An OpenAI-compatible Whisper server for dictation from my phone and Windows PC. Audio never leaves the network.</p>
       <ul class="tags"><li>faster-whisper</li><li>Docker</li><li>Tailscale</li></ul>

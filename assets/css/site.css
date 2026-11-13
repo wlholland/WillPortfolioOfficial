@@ -103,6 +103,9 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); letter-spacing: -.015em; line-height: 
 .lab:first-of-type { border-top: 0; }
 .lab .shot { margin: 0; }
 .lab .text-only { border: 1px solid var(--line); border-radius: 6px; aspect-ratio: 16 / 10; display: grid; place-items: center; color: var(--faint); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; text-align: center; padding: 20px; }
+.lab .text-only.flow { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; letter-spacing: 0; text-transform: none; }
+.lab .text-only.flow span { color: var(--ink); font-size: 18px; font-weight: 300; letter-spacing: -.01em; }
+.lab .text-only.flow i { font-style: normal; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
 
 .reveal { transition: opacity .9s ease, transform .9s ease; }
 .js .reveal:not(.in) { opacity: 0; transform: translateY(16px); }
