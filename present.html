@@ -5,132 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Will Holland — Presenter</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#05070b">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="stylesheet" href="/assets/css/present.css">
+  <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/present.js" defer></script>
 </head>
 <body class="present">
-<div class="glow" aria-hidden="true"></div>
+<canvas id="waves" aria-hidden="true"></canvas>
 <div class="deck" id="deck" aria-live="polite">
 
-  <section class="slide s-intro">
-    <div class="avatar-mark">WH</div>
+  <section class="slide s-cover">
     <div>
-      <span class="eyebrow">BYU Information Systems ’27 · Marriott School</span>
+      <p class="label accent">BYU Information Systems ’27</p>
       <h1>Will Holland</h1>
-      <p class="big">IT consultant who <span class="grad">ships with AI.</span></p>
-      <p class="sub">Looking for IT &amp; management consulting internships and roles.</p>
+      <p class="big">IT consultant who builds with AI.</p>
+      <p class="small">Looking for IT &amp; management consulting internships and roles.</p>
     </div>
-    <div class="qr-big"><img src="/assets/img/qr-site.svg" alt="QR code: willholland.dev"><span>willholland.dev</span></div>
+    <figure class="qr"><img src="/assets/img/qr-site.svg" alt="QR code to willholland.dev"><figcaption>willholland.dev</figcaption></figure>
   </section>
 
   <section class="slide">
-    <span class="eyebrow">How I use AI</span>
-    <h2>AI is my accelerator.<br><span class="grad">Judgment is my job.</span></h2>
-    <ul class="points">
-      <li><b>Learn fast</b>: Hello World → working Navisworks plugin in 3 days</li>
-      <li><b>Ship real products</b>: an iPhone app live on the App Store</li>
-      <li><b>Make it safe</b>: AI-written code gets scanned, encrypted, rate-limited</li>
-      <li><b>Own the decision</b>: verify, test, and measure the ROI</li>
-    </ul>
-  </section>
-
-  <section class="slide s-split">
-    <div>
-      <img class="app-icon" src="/assets/img/pmp-icon.webp" alt="">
-      <span class="eyebrow">Founder · Holland Labs LLC</span>
-      <h2>Post-Mission Planner</h2>
-      <ul class="points">
-        <li>Live on the <b>App Store</b></li>
-        <li>Calendar sync, goals &amp; relationship tracking</li>
-        <li>iPhone app + API + admin + website, built with AI agents</li>
-        <li>Personal data encrypted (AES-256-GCM)</li>
-      </ul>
-    </div>
-    <div class="phones">
-      <div class="phone"><img src="/assets/img/pmp-people.webp" alt=""></div>
-      <div class="phone"><img src="/assets/img/pmp-home.webp" alt=""></div>
-      <div class="phone"><img src="/assets/img/pmp-goals.webp" alt=""></div>
-    </div>
-  </section>
-
-  <section class="slide s-split">
-    <div>
-      <span class="award">🏆 2nd place · Best AI Usage</span>
-      <h2>Doorway</h2>
-      <p class="big-sm">Reads your resume with AI, pulls BYU career &amp; club events into one plan, and tells you who to meet and what to say.</p>
-      <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip ai">Gemini API</span><span class="chip">Railway</span></div>
-    </div>
-    <img class="shot" src="/assets/img/doorway.webp" alt="Doorway landing page">
-  </section>
-
-  <section class="slide s-split">
-    <div>
-      <span class="eyebrow">Security · hackathon</span>
-      <h2>VibeSec</h2>
-      <ol class="flow">
-        <li>Every <b>git push</b> triggers a GitHub Action</li>
-        <li>Scans for <b>leaked secrets</b>, exposed .env files, vulnerable packages</li>
-        <li>Maps findings to <b>OWASP</b>; <b>GPT</b> triages them</li>
-        <li>Commits a fix-it report written <b>for an AI coding agent</b></li>
-      </ol>
-    </div>
-    <img class="shot" src="/assets/img/vibesec-video.webp" alt="VibeSec video">
-  </section>
-
-  <section class="slide">
-    <span class="eyebrow">Okland Construction · VDC automation</span>
-    <h2>Learned C# with AI.<br><span class="grad">Shipped plugins the team used.</span></h2>
-    <div class="stats">
-      <div><b>3 days</b><span>Hello World → working Navisworks add-in</span></div>
-      <div><b>~1,800 hrs</b><span>staff time saved per year (my ROI estimate)</span></div>
-      <div><b>80%</b><span>less manual processing</span></div>
-    </div>
-    <p class="sub">3 Navisworks add-ins · Python automations · scheduled Revit → DWG pipeline with one-click installer</p>
-  </section>
-
-  <section class="slide">
-    <span class="eyebrow">Homelab · self-hosted AI</span>
-    <h2>Private AI tools <span class="grad">I run myself.</span></h2>
-    <div class="trio">
-      <figure><img src="/assets/img/lab-classnotes.webp" alt=""><figcaption>Class Notes: record → local Whisper → AI notes</figcaption></figure>
-      <figure><img src="/assets/img/lab-library-flashcards.webp" alt=""><figcaption>Study Library: AI flashcards with synced progress</figcaption></figure>
-      <figure><img src="/assets/img/lab-minecraft.webp" alt=""><figcaption>Hardened game server + admin panel</figcaption></figure>
+    <p class="label accent">01 &nbsp; Post-Mission Planner</p>
+    <div class="split">
+      <div>
+        <h2>An iPhone app I built with AI, live on the App Store.</h2>
+        <p class="small">iPhone app, API, encrypted database, admin console and website. One person plus AI coding agents.</p>
+        <dl class="metrics"><div><dt>Status</dt><dd>On the App Store</dd></div><div><dt>Team</dt><dd>1 + AI</dd></div></dl>
+      </div>
+      <div class="trio"><img src="/assets/img/pmp-home.webp" alt=""><img src="/assets/img/pmp-people.webp" alt=""><img src="/assets/img/pmp-goals.webp" alt=""></div>
     </div>
   </section>
 
   <section class="slide">
-    <span class="eyebrow">NetworkPC · IT consulting</span>
-    <h2>5 small businesses on<br><span class="grad">Microsoft 365 &amp; Azure.</span></h2>
-    <ul class="points">
-      <li><b>Incident response</b>: business-email-compromise investigations</li>
-      <li><b>Tenant hardening</b>: MFA, Conditional Access, legacy sign-in blocked</li>
-      <li><b>Intune &amp; Autopilot</b>: zero-touch laptops, Win32 packaging, update rings</li>
-    </ul>
+    <p class="label accent">02 &nbsp; Doorway · hackathon</p>
+    <div class="split">
+      <div>
+        <h2>2nd place, Best AI Usage.</h2>
+        <p class="small">Reads your resume with Gemini and turns scattered BYU events into a networking plan: where to go, who to meet, what to say.</p>
+      </div>
+      <img class="frame" src="/assets/img/doorway.webp" alt="">
+    </div>
   </section>
 
-  <section class="slide s-intro">
+  <section class="slide">
+    <p class="label accent">03 &nbsp; Okland Construction · VDC automation</p>
+    <h2>I barely knew how to code. AI taught me C#, and I shipped plugins the team used.</h2>
+    <dl class="metrics big-metrics">
+      <div><dt>Hello World → working plugin</dt><dd>3 days</dd></div>
+      <div><dt>Est. staff hours saved / yr</dt><dd>~1,800</dd></div>
+      <div><dt>Manual processing</dt><dd>−80%</dd></div>
+    </dl>
+  </section>
+
+  <section class="slide">
+    <p class="label accent">04 &nbsp; VibeSec</p>
+    <h2>Security for AI-written code.</h2>
+    <ol class="steps">
+      <li>Every git push triggers a scan</li>
+      <li>Leaked keys, exposed .env files, vulnerable packages</li>
+      <li>Mapped to OWASP, triaged by GPT</li>
+      <li>Fix plan written for an AI coding agent</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <p class="label accent">05 &nbsp; NetworkPC · IT consulting</p>
+    <h2>Microsoft 365 &amp; Azure for five small businesses.</h2>
+    <ol class="steps">
+      <li>Email-compromise investigations and containment</li>
+      <li>Tenant hardening: MFA, Conditional Access, legacy sign-in off</li>
+      <li>Intune &amp; Autopilot: laptops ready out of the box</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <p class="label accent">06 &nbsp; Homelab</p>
+    <h2>Private AI tools I run at home.</h2>
+    <div class="trio wide"><img src="/assets/img/lab-classnotes.webp" alt=""><img src="/assets/img/lab-library-flashcards.webp" alt=""><img src="/assets/img/lab-minecraft.webp" alt=""></div>
+    <p class="small">Lecture recording → local Whisper → AI notes · AI flashcards with synced progress · a hardened game server</p>
+  </section>
+
+  <section class="slide s-cover">
     <div>
-      <span class="eyebrow">Let’s talk</span>
-      <h1 style="font-size:clamp(48px,7vw,104px)">Scan to see<br><span class="grad">the full portfolio.</span></h1>
-      <p class="sub">LinkedIn: willhollanddev · Handshake: willhollanddev · GitHub: wlholland</p>
+      <p class="label accent">Let’s talk</p>
+      <h1>Scan for the full portfolio.</h1>
+      <p class="small">LinkedIn &amp; Handshake: willhollanddev · GitHub: wlholland</p>
     </div>
-    <div class="qr-big"><img src="/assets/img/qr-site.svg" alt="QR code: willholland.dev"><span>willholland.dev</span></div>
+    <figure class="qr"><img src="/assets/img/qr-site.svg" alt="QR code to willholland.dev"><figcaption>willholland.dev</figcaption></figure>
   </section>
 </div>
 
 <div class="hud">
   <div class="progress"><i id="bar"></i></div>
   <div class="hud-row">
-    <a href="/" class="hud-btn">← Site</a>
-    <span id="count">1 / 9</span>
-    <button class="hud-btn" id="pause" type="button">Pause</button>
-    <button class="hud-btn" id="fs" type="button">Full screen</button>
+    <a href="/" class="label">← Site</a>
+    <span id="count" class="label">1 / 8</span>
+    <button class="label" id="pause" type="button">Pause</button>
+    <button class="label" id="fs" type="button">Full screen</button>
   </div>
 </div>
-<div class="qr-corner"><img src="/assets/img/qr-site.svg" alt="QR code: willholland.dev"></div>
+<figure class="qr-corner"><img src="/assets/img/qr-site.svg" alt="QR code to willholland.dev"></figure>
 </body>
 </html>

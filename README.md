@@ -6,11 +6,11 @@ headers in `serve.json`).
 
 | Path | What |
 |---|---|
-| `index.html` | Main portfolio (AI approach, work, consulting case studies, experience, skills) |
+| `index.html` | Main portfolio: hero (animated line field), 7 projects in a two-column editorial layout, about, experience, contact |
 | `homelab.html` | Homelab: screenshots + stacks of the self-hosted tools |
 | `present.html` | **Presenter mode** for the career-fair table: full-screen slides, auto-advance, ←/→, F = full screen, P = pause, QR to the site |
 | `assets/css`, `assets/js` | Styles and small progressive-enhancement scripts |
-| `assets/img` | WebP images (keep each under ~70 KB), QR codes, Open Graph image |
+| `assets/img`, `assets/fonts` | WebP images (keep each under ~70 KB), QR code, Open Graph image; self-hosted Inter (variable, latin) |
 | `sw.js` | Service worker: precaches the whole site so it works **offline** after one visit |
 | `scripts/build-sw.mjs` | Regenerates the precache list + version in `sw.js` |
 

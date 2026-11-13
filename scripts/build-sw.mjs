@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const EXT = /\.(html|css|js|webp|svg|webmanifest)$/;
+const EXT = /\.(html|css|js|webp|svg|webmanifest|woff2)$/;
 const SKIP = new Set([".git", "node_modules", "scripts"]);
 
 function walk(dir) {

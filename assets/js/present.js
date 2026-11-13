@@ -11,7 +11,7 @@
   function show(n) {
     i = (n + slides.length) % slides.length;
     slides.forEach((s, k) => s.classList.toggle("on", k === i));
-    document.body.classList.toggle("qr-hidden", slides[i].classList.contains("s-intro"));
+    document.body.classList.toggle("qr-hidden", slides[i].classList.contains("s-cover"));
     count.textContent = `${i + 1} / ${slides.length}`;
     start = performance.now(); elapsed = 0;
   }

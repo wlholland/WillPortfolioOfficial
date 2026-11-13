@@ -3,295 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Will Holland — IT Consultant who ships with AI</title>
-  <meta name="description" content="Will Holland — BYU Information Systems ’27. IT consultant for small businesses on Microsoft 365 and Azure, and an AI-native builder: an iPhone app on the App Store, Revit/Navisworks automation, security tooling, and a self-hosted AI homelab.">
-  <meta name="theme-color" content="#05070b">
+  <title>Will Holland</title>
+  <meta name="description" content="Will Holland — IT consultant and builder. BYU Information Systems ’27. Microsoft 365 and Azure for small businesses; an iPhone app on the App Store; Revit and Navisworks automation; security tooling.">
+  <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Will Holland — IT Consultant who ships with AI">
-  <meta property="og:description" content="BYU Information Systems ’27 · Microsoft 365 & Azure consulting · AI-built apps, automation and security tooling.">
+  <meta property="og:title" content="Will Holland">
+  <meta property="og:description" content="IT consultant who builds with AI. BYU Information Systems ’27.">
   <meta property="og:image" content="https://willholland.dev/assets/img/og.png">
   <meta property="og:url" content="https://willholland.dev/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/site.js" defer></script>
 </head>
 <body>
-<div class="glow" aria-hidden="true"></div>
-
-<header class="nav">
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/"><span class="mono-mark">WH</span>Will Holland</a>
-    <nav class="nav-links" aria-label="Sections">
-      <a href="#ai">How I use AI</a>
+    <a class="home" href="/">will holland</a>
+    <nav class="site-nav" aria-label="Sections">
       <a href="#work">Work</a>
-      <a href="#consulting">Consulting</a>
-      <a href="#experience">Experience</a>
       <a href="/homelab.html">Homelab</a>
+      <a href="#about">About</a>
+      <a class="keep" href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-sm btn-primary" href="https://www.linkedin.com/in/willhollanddev/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </header>
 
 <main>
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="avatar-mark reveal" aria-hidden="true">WH</div>
-    <span class="eyebrow reveal">Will Holland · BYU Information Systems ’27</span>
-    <h1 class="display reveal">IT consultant who<br><span class="grad">ships with AI.</span></h1>
-    <p class="lede reveal">I run IT for five small businesses on Microsoft 365 and Azure, and I use AI to learn fast and build real things: an iPhone app on the App Store, Revit and Navisworks plugins that cut manual work by 80%, and a private lab of self-hosted AI tools.</p>
-    <div class="hero-ctas reveal">
-      <a class="btn btn-primary" href="#work">See the work</a>
-      <a class="btn" href="https://byu.joinhandshake.com/profiles/willhollanddev" target="_blank" rel="noopener">Handshake</a>
-      <a class="btn" href="https://github.com/wlholland" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <div class="proof reveal" role="list">
-      <div role="listitem"><b>App Store</b><span>Post-Mission Planner, an iPhone app I founded and built</span></div>
-      <div role="listitem"><b>2nd place</b><span>Best AI Usage, CS Neighbor Homecoming Hackathon</span></div>
-      <div role="listitem"><b>80%</b><span>less manual processing with my Okland VDC plugins</span></div>
-      <div role="listitem"><b>5 clients</b><span>secured on Microsoft 365 &amp; Azure at NetworkPC</span></div>
-    </div>
+<section class="hero" id="top">
+  <canvas id="waves" aria-hidden="true"></canvas>
+  <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+  <div class="inner">
+    <h1>Will Holland</h1>
+    <p class="sub">IT consultant who builds with AI. BYU Information Systems ’27.</p>
+    <nav class="prompts" aria-label="Start here">
+      <a href="#work">What has he built?</a>
+      <a href="#about">How does he use AI?</a>
+      <a href="#experience">Where has he worked?</a>
+    </nav>
   </div>
 </section>
 
-<!-- AI APPROACH -->
-<section id="ai">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="n">01</span> · How I use AI</span>
-      <h2>AI is my accelerator.<br><span class="grad">Judgment is my job.</span></h2>
-      <p class="lede">Every project on this page was built with AI as a tutor, pair programmer or teammate. What makes it work is knowing what to ask, checking the answer, and measuring the result.</p>
-    </div>
-    <div class="approach">
-      <article class="tile reveal"><div class="icon">🧭</div><h3>Learn anything, fast</h3><p>At Okland I’d barely written code. With ChatGPT as a tutor I went from a Hello World plugin to a working Navisworks add-in in 3 days, then shipped tools the team used every week.</p></article>
-      <article class="tile reveal"><div class="icon">🚀</div><h3>Ship real products</h3><p>Post-Mission Planner went from idea to the App Store with AI coding agents: iPhone app, API, admin console and website, built and run by one person.</p></article>
-      <article class="tile reveal"><div class="icon">🛡️</div><h3>Make it safe</h3><p>AI writes code fast; I make sure it’s secure. VibeSec scans every push for leaked secrets, and my own apps get encryption, rate limits and security reviews.</p></article>
-      <article class="tile reveal"><div class="icon">⚖️</div><h3>Own the decision</h3><p>I treat AI output like a sharp analyst’s first draft: verify it against the source, test it, quantify the impact, and stand behind the recommendation.</p></article>
-    </div>
-  </div>
-</section>
+<div class="wrap" id="work">
+  <div class="rule"><p class="label accent">Recent work</p><p class="label">07 projects</p></div>
 
-<!-- WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="n">02</span> · Selected work</span>
-      <h2>Things I’ve built.</h2>
-    </div>
-
-    <article class="feature reveal" aria-labelledby="pmp-title">
-      <div>
-        <img class="app-icon" src="/assets/img/pmp-icon.webp" alt="" width="64" height="64">
-        <span class="eyebrow">Founder · Holland Labs LLC</span>
-        <h3 id="pmp-title">Post-Mission Planner</h3>
-        <p class="muted" style="margin:0;font-size:17px">The daily planning returned missionaries loved on their missions, rebuilt as a polished iPhone app.</p>
-        <dl class="facts">
-          <div><dt>Problem</dt><dd>Missionaries plan every day, track people and set goals in a dedicated app. After they come home, that structure disappears.</dd></div>
-          <div><dt>Built</dt><dd>An iPhone app with calendar (Google &amp; Apple sync), goals and relationship tracking, plus its API, encrypted database, staff admin console and marketing site.</dd></div>
-          <div><dt>Result</dt><dd>Live on the App Store. Personal data sealed with AES-256-GCM; staff tools reachable only over a private network.</dd></div>
-        </dl>
-        <div class="chips">
-          <span class="chip">React Native (Expo)</span><span class="chip">TypeScript</span><span class="chip">Node / Express</span><span class="chip">PostgreSQL</span><span class="chip">Railway</span><span class="chip">Next.js</span><span class="chip ai">Built with AI agents</span>
-        </div>
-        <div class="links" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:18px">
-          <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/post-mission-planner/id6791026821" target="_blank" rel="noopener">App Store →</a>
-          <a class="btn btn-sm" href="https://postmissionplanner.com" target="_blank" rel="noopener">postmissionplanner.com</a>
-        </div>
+  <article class="row reveal" id="pmp">
+    <div class="meta"><p class="label">01 &nbsp; 2026</p><p class="label">Founder + builder</p></div>
+    <div class="content">
+      <h2>Post-Mission Planner</h2>
+      <p class="lead">An iPhone app that brings back the daily planning returned missionaries relied on: calendar, goals and the people in their lives, in one place.</p>
+      <p class="body">On a mission, every day is planned in one app. When you come home, that structure disappears. I built PMP to bring it back, and I built all of it with AI coding agents: the iPhone app, the API, an encrypted database, a staff admin console that’s only reachable over a private network, and the marketing site. It’s live on the App Store under my company, Holland Labs.</p>
+      <ul class="tags"><li>Claude Code</li><li>React Native</li><li>TypeScript</li><li>Node</li><li>Postgres</li><li>Railway</li></ul>
+      <dl class="metrics">
+        <div><dt>Status</dt><dd>On the App Store</dd></div>
+        <div><dt>Team</dt><dd>1 person + AI</dd></div>
+      </dl>
+      <div class="links"><a href="https://apps.apple.com/us/app/post-mission-planner/id6791026821" target="_blank" rel="noopener">App Store →</a><a href="https://postmissionplanner.com" target="_blank" rel="noopener">postmissionplanner.com →</a></div>
+      <div class="shots">
+        <img src="/assets/img/pmp-home.webp" alt="Post-Mission Planner home screen" loading="lazy" width="900" height="1955">
+        <img src="/assets/img/pmp-people.webp" alt="Post-Mission Planner people screen" loading="lazy" width="900" height="1955">
+        <img src="/assets/img/pmp-goals.webp" alt="Post-Mission Planner goals screen" loading="lazy" width="900" height="1955">
       </div>
-      <div class="phones" aria-hidden="true">
-        <div class="phone"><img src="/assets/img/pmp-people.webp" alt="" loading="lazy" width="900" height="1955"></div>
-        <div class="phone"><img src="/assets/img/pmp-home.webp" alt="" loading="lazy" width="900" height="1955"></div>
-        <div class="phone"><img src="/assets/img/pmp-goals.webp" alt="" loading="lazy" width="900" height="1955"></div>
-      </div>
-    </article>
-
-    <div class="projects">
-      <article class="card reveal">
-        <div class="media"><img src="/assets/img/doorway.webp" alt="Doorway landing page: The people hiring you are already on campus" loading="lazy" width="1400" height="875"></div>
-        <div class="body">
-          <span class="award">🏆 2nd place · Best AI Usage</span>
-          <span class="tag">Hackathon · Oct 2026 · Team “No Prior Experience”</span>
-          <h3>Doorway</h3>
-          <div class="pbr">
-            <p><b>Problem:</b> Students apply online when networking is what gets them hired, and campus events are scattered across dozens of calendars.</p>
-            <p><b>Built:</b> Doorway reads your resume with AI, pulls BYU career and club events into one plan, and tells you which to attend, who will be there, and what to say.</p>
-          </div>
-          <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip ai">Gemini API</span><span class="chip">Railway</span></div>
-          <div class="links"><a class="btn btn-sm" href="https://byu-doorway.vercel.app" target="_blank" rel="noopener">Live demo →</a><a class="btn btn-sm" href="https://github.com/DrFunDip72/hackathon-no-prior-experience" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="media"><img src="/assets/img/vibesec-video.webp" alt="VibeSec: automated, simple security for vibe coders (video)" loading="lazy" width="1280" height="720"></div>
-        <div class="body">
-          <span class="tag">Security tool · Sandbox hackathon application</span>
-          <h3>VibeSec</h3>
-          <div class="pbr">
-            <p><b>Problem:</b> “Vibe coders” ship AI-written code fast, often with leaked API keys, exposed .env files and vulnerable packages.</p>
-            <p><b>Built:</b> A GitHub Action that scans every push for secrets, exposed environment files and vulnerable dependencies, maps findings to OWASP, has GPT triage them, and commits a fix-it report written for an AI coding agent to follow.</p>
-          </div>
-          <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">GitHub Actions</span><span class="chip ai">OpenAI API</span><span class="chip">Railway</span><span class="chip">OWASP</span></div>
-          <div class="links"><a class="btn btn-sm" href="https://youtu.be/69h5R6QexmY" target="_blank" rel="noopener">Watch the demo →</a><a class="btn btn-sm" href="https://github.com/Preston-Miller/SBHackathon-PLEIADES" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card reveal" id="okland">
-        <div class="media"><div class="art">
-          <svg viewBox="0 0 400 225" width="100%" role="img" aria-label="Diagram: Revit and Navisworks models flow through custom C# plugins and Python scripts into automated clash reports">
-            <defs><linearGradient id="okg" x1="0" x2="1"><stop offset="0" stop-color="#76aaff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-            <g font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#c9cfdb">
-              <rect x="14" y="40" width="104" height="54" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.14)"/><text x="66" y="72" text-anchor="middle">Revit model</text>
-              <rect x="14" y="130" width="104" height="54" rx="12" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.14)"/><text x="66" y="162" text-anchor="middle">Navisworks</text>
-              <rect x="150" y="76" width="110" height="72" rx="14" fill="rgba(118,170,255,.12)" stroke="url(#okg)" stroke-width="1.5"/><text x="205" y="106" text-anchor="middle" fill="#fff" font-weight="700">C# plugins</text><text x="205" y="126" text-anchor="middle">+ Python scripts</text>
-              <rect x="290" y="40" width="98" height="54" rx="12" fill="rgba(74,222,128,.08)" stroke="rgba(74,222,128,.35)"/><text x="339" y="66" text-anchor="middle">Clash reports</text><text x="339" y="82" text-anchor="middle" font-size="11" fill="#8e97a8">automated</text>
-              <rect x="290" y="130" width="98" height="54" rx="12" fill="rgba(74,222,128,.08)" stroke="rgba(74,222,128,.35)"/><text x="339" y="156" text-anchor="middle">Search sets</text><text x="339" y="172" text-anchor="middle" font-size="11" fill="#8e97a8">&amp; appearances</text>
-              <path d="M118 67 C 135 67 135 100 150 104 M118 157 C 135 157 135 124 150 120 M260 104 C 275 100 275 67 290 67 M260 120 C 275 124 275 157 290 157" stroke="url(#okg)" stroke-width="2" fill="none"/>
-            </g>
-          </svg>
-        </div></div>
-        <div class="body">
-          <span class="tag">Okland Construction · VDC Automation</span>
-          <h3>Revit &amp; Navisworks automation</h3>
-          <div class="pbr" id="okland-pbr">
-            <p><b>Problem:</b> On the virtual design &amp; construction team, clash reviews, model publishing and drawing exports were hours of repetitive clicking in Navisworks and Revit every week.</p>
-            <p><b>Built:</b> With almost no C# background, I used ChatGPT (including a custom GPT for the Navisworks API) to learn Visual Studio and the Autodesk APIs. I shipped 3 Navisworks add-ins, Python automations for model publishing, and a scheduled Revit-to-DWG export &amp; upload pipeline with a one-click installer.</p>
-            <p><b>How I used AI:</b> spec first. The AI restated my plan and I approved it before any code. Then a tight debug loop: code, error, goal, repeat.</p>
-            <p class="result">Hello World → working plugin in 3 days</p>
-            <p class="result">My ROI model: ~1,800 staff-hours/year saved (est. ~$91K at $50/hr)</p>
-          </div>
-          <div class="chips"><span class="chip">C# / .NET 4.8</span><span class="chip">Navisworks API</span><span class="chip">Revit API</span><span class="chip">Python</span><span class="chip">WinForms · Tkinter</span><span class="chip">Task Scheduler</span><span class="chip ai">ChatGPT · custom GPT</span></div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="media"><img src="/assets/img/freeroomfinder.webp" alt="FreeRoomFinder building and time-range search" loading="lazy"></div>
-        <div class="body">
-          <span class="tag">Side project · BYU</span>
-          <h3>FreeRoomFinder</h3>
-          <div class="pbr">
-            <p><b>Problem:</b> Finding an empty classroom to study or meet in means wandering the halls.</p>
-            <p><b>Built:</b> A tool that reads BYU’s class schedules and shows which rooms are free for any day and time window.</p>
-          </div>
-          <div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">JavaScript</span><span class="chip">Web scraping</span></div>
-          <div class="links"><a class="btn btn-sm" href="https://frf.willholland.dev" target="_blank" rel="noopener">Live site →</a><a class="btn btn-sm" href="https://github.com/wlholland/freeroomfinder" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
     </div>
+  </article>
 
-    <a class="card lab-teaser reveal" href="/homelab.html">
-      <div class="body">
-        <span class="tag">Self-hosted · always on</span>
-        <h3>My homelab: private AI tools I run myself</h3>
-        <p class="muted" style="margin:0">Lecture recording with local transcription and AI study notes, a study library with streaks, a hardened public game server, and more. All on one Linux box, reachable only over a private network.</p>
-        <span class="btn btn-sm btn-primary" style="align-self:flex-start;margin-top:8px">Explore the homelab →</span>
-      </div>
-      <div class="media"><img src="/assets/img/lab-classnotes.webp" alt="Class Notes: record a lecture by tapping your class" loading="lazy"></div>
-    </a>
-  </div>
-</section>
+  <article class="row reveal" id="doorway">
+    <div class="meta"><p class="label">02 &nbsp; 2026</p><p class="label">Hackathon · 2nd place</p></div>
+    <div class="content">
+      <h2>Doorway</h2>
+      <p class="lead">Turns scattered campus events into a personal networking plan: which events to go to, who will be there, and what to say.</p>
+      <p class="body">Built with team “No Prior Experience” at the CS Neighbor Homecoming Hackathon. Doorway reads your resume with Gemini, pulls BYU career and club calendars into one plan, and explains why each event is worth your evening. We took 2nd place for Best AI Usage.</p>
+      <ul class="tags"><li>Gemini API</li><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li></ul>
+      <dl class="metrics">
+        <div><dt>Award</dt><dd>2nd · Best AI Usage</dd></div>
+      </dl>
+      <div class="links"><a href="https://byu-doorway.vercel.app" target="_blank" rel="noopener">Live demo →</a><a href="https://github.com/DrFunDip72/hackathon-no-prior-experience" target="_blank" rel="noopener">GitHub →</a></div>
+      <img class="shot" src="/assets/img/doorway.webp" alt="Doorway landing page" loading="lazy" width="1400" height="875">
+    </div>
+  </article>
 
-<!-- CONSULTING -->
-<section id="consulting">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="n">03</span> · Consulting</span>
-      <h2>Case studies from the field.</h2>
-      <p class="lede">From NetworkPC, the managed IT practice I run with my father. Client details are anonymized.</p>
+  <article class="row reveal" id="okland">
+    <div class="meta"><p class="label">03 &nbsp; 2024</p><p class="label">VDC automation · Okland</p></div>
+    <div class="content">
+      <h2>Revit &amp; Navisworks automation</h2>
+      <p class="lead">Plugins and scripts that took the repetitive clicking out of clash review, model publishing and drawing exports.</p>
+      <p class="body">I started the internship barely able to code. With ChatGPT as a tutor, plus a custom GPT for the Navisworks API, I learned C# and Visual Studio and went from a Hello World plugin to a working Navisworks add-in in three days. My rule with AI: write the spec, have it restate the plan, approve it before any code. By the end I’d shipped three Navisworks add-ins, Python automations, and a scheduled Revit-to-DWG pipeline with a one-click installer, and tracked the ROI of each tool.</p>
+      <ul class="tags"><li>C#</li><li>.NET</li><li>Navisworks API</li><li>Revit API</li><li>Python</li><li>ChatGPT</li></ul>
+      <dl class="metrics">
+        <div><dt>First plugin</dt><dd>3 days</dd></div>
+        <div><dt>Est. hours saved / yr</dt><dd>~1,800</dd></div>
+        <div><dt>Manual processing</dt><dd>−80%</dd></div>
+      </dl>
     </div>
-    <div class="cases">
-      <article class="case reveal">
-        <span class="tag">Microsoft 365 · Incident response</span>
-        <h3>Stopping an email compromise, then hardening the tenant</h3>
-        <ol>
-          <li><span><b>Investigate:</b> traced a business-email-compromise attempt through sign-in and audit logs: suspicious sign-ins, forwarding and inbox rules.</span></li>
-          <li><span><b>Contain:</b> revoked sessions, reset credentials, removed malicious rules and confirmed nothing else was touched.</span></li>
-          <li><span><b>Harden:</b> enforced MFA and Conditional Access, blocked legacy sign-in, tightened mail and sharing policies.</span></li>
-          <li><span><b>Prevent:</b> documented the playbook and walked the owner through the warning signs, so the next attempt gets reported, not paid.</span></li>
-        </ol>
-      </article>
-      <article class="case reveal">
-        <span class="tag">Intune · Autopilot · Entra ID</span>
-        <h3>Zero-touch laptops: an Intune &amp; Autopilot rollout</h3>
-        <ol>
-          <li><span><b>Design:</b> Autopilot enrollment, Entra ID join, and Conditional Access requiring compliant devices.</span></li>
-          <li><span><b>Package:</b> line-of-business apps as Win32 packages with detection rules, and policies as configuration profiles.</span></li>
-          <li><span><b>Automate:</b> PowerShell remediation scripts for drift, plus staged Windows update rings (pilot → broad).</span></li>
-          <li><span><b>Result:</b> a new laptop goes from box to ready-to-work with no hands-on imaging; phones covered with Android Enterprise.</span></li>
-        </ol>
-      </article>
-    </div>
-  </div>
-</section>
+  </article>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="n">04</span> · Experience</span>
-      <h2>Where I’ve worked.</h2>
+  <article class="row reveal" id="vibesec">
+    <div class="meta"><p class="label">04 &nbsp; 2026</p><p class="label">Security + AI</p></div>
+    <div class="content">
+      <h2>VibeSec</h2>
+      <p class="lead">A GitHub Action that catches leaked secrets and vulnerable packages in AI-written code, then writes the fix-it plan for an AI agent.</p>
+      <p class="body">Built with a friend for a Sandbox hackathon application. Every push triggers a scan for exposed API keys, .env files and vulnerable dependencies. Findings are mapped to OWASP, triaged by GPT, and committed back as a report written as step-by-step instructions a coding agent can follow.</p>
+      <ul class="tags"><li>Python</li><li>FastAPI</li><li>GitHub Actions</li><li>OpenAI API</li><li>OWASP</li></ul>
+      <dl class="metrics">
+        <div><dt>Runs on</dt><dd>Every push</dd></div>
+        <div><dt>Output</dt><dd>Agent-ready fixes</dd></div>
+      </dl>
+      <div class="links"><a href="https://youtu.be/69h5R6QexmY" target="_blank" rel="noopener">Watch the demo →</a><a href="https://github.com/Preston-Miller/SBHackathon-PLEIADES" target="_blank" rel="noopener">GitHub →</a></div>
     </div>
-    <div class="timeline">
-      <article class="job reveal"><span class="when">Oct 2024 – Present</span><h3>IT Consultant &amp; Help Desk Lead</h3><div class="org">NetworkPC</div>
-        <p>Co-run a managed IT practice for five small-business clients on Microsoft 365 and Azure: incident response, tenant hardening, business-email-compromise investigations, and virtualized environments.</p></article>
-      <article class="job reveal"><span class="when">Jun – Aug 2026</span><h3>MDM Implementation Intern</h3><div class="org">Thatcher Company</div>
-        <p>Implemented device management with Intune and Autopilot across Windows and Android Enterprise: PowerShell remediation scripts, Win32 app packaging, update rings, Entra ID and Conditional Access.</p></article>
-      <article class="job reveal"><span class="when">Jun 2024 – Mar 2025</span><h3>VDC Automation Specialist</h3><div class="org">Okland Construction</div>
-        <p>Taught myself C# and the Autodesk APIs with AI, then built Navisworks add-ins, Python automations and a scheduled Revit-to-DWG pipeline that cut manual processing time by 80%. Tracked ROI per tool, wrote a 15-page plugin guide for teammates, and demoed the tools to leadership. Also ran clash detection in Navisworks and Revit.</p></article>
-      <article class="job reveal"><span class="when">Jan – Apr 2025</span><h3>Help Desk Technician</h3><div class="org">BYU Dean’s Office</div>
-        <p>Supported 2,000+ Windows and macOS machines for faculty and staff.</p></article>
-      <article class="job reveal"><span class="when">Dec 2021 – Dec 2023</span><h3>Full-time Missionary · Leader &amp; Trainer</h3><div class="org">St. Louis, Missouri</div>
-        <p>Led and trained 150+ missionaries and ran social media outreach.</p></article>
-    </div>
-  </div>
-</section>
+  </article>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="n">05</span> · Skills</span>
-      <h2>Toolkit.</h2>
+  <article class="row reveal" id="networkpc">
+    <div class="meta"><p class="label">05 &nbsp; 2024–now</p><p class="label">IT consultant · NetworkPC</p></div>
+    <div class="content">
+      <h2>Microsoft 365 for small businesses</h2>
+      <p class="lead">Security and support for five small businesses on Microsoft 365 and Azure, in the managed-IT practice I run with my dad.</p>
+      <p class="body">Most of the job is keeping small teams safe without slowing them down. When an email-compromise attempt hits, I trace it through sign-in and audit logs, contain it (sessions revoked, credentials reset, malicious inbox rules removed), then harden the tenant with MFA, Conditional Access and blocked legacy sign-in. I also roll out Intune and Autopilot, so a new laptop goes from box to ready without hands-on imaging.</p>
+      <ul class="tags"><li>Microsoft 365</li><li>Entra ID</li><li>Intune</li><li>Autopilot</li><li>Azure</li><li>PowerShell</li></ul>
+      <dl class="metrics">
+        <div><dt>Clients</dt><dd>5</dd></div>
+        <div><dt>Focus</dt><dd>Incident response · hardening</dd></div>
+      </dl>
     </div>
-    <div class="skills">
-      <div class="tile reveal"><h3>Cloud &amp; identity</h3><div class="chips"><span class="chip">Microsoft 365</span><span class="chip">Entra ID</span><span class="chip">Intune</span><span class="chip">Autopilot</span><span class="chip">Conditional Access</span><span class="chip">Azure</span></div></div>
-      <div class="tile reveal"><h3>Code &amp; automation</h3><div class="chips"><span class="chip">PowerShell</span><span class="chip">Python</span><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">JavaScript / TypeScript</span><span class="chip">React</span></div></div>
-      <div class="tile reveal"><h3>Systems &amp; data</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Windows</span><span class="chip">macOS</span><span class="chip">Linux</span><span class="chip">Virtual machines</span><span class="chip">Docker</span></div></div>
-      <div class="tile reveal"><h3>AI</h3><div class="chips"><span class="chip ai">Claude Code</span><span class="chip ai">OpenAI API</span><span class="chip ai">Gemini API</span><span class="chip ai">Local LLMs (Ollama)</span><span class="chip ai">Whisper speech-to-text</span></div></div>
-      <div class="tile reveal"><h3>Business</h3><div class="chips"><span class="chip">ROI analysis</span><span class="chip">Client communication</span><span class="chip">Documentation</span><span class="chip">Training &amp; leadership</span></div></div>
-      <div class="tile reveal"><h3>Security</h3><div class="chips"><span class="chip">Incident response</span><span class="chip">Tenant hardening</span><span class="chip">Encryption at rest</span><span class="chip">Private networking (Tailscale)</span></div></div>
-    </div>
-  </div>
-</section>
+  </article>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap about">
-    <img class="reveal" src="/assets/img/will.webp" alt="Will Holland outdoors in the mountains" loading="lazy" width="512" height="384">
-    <div class="reveal">
-      <span class="eyebrow"><span class="n">06</span> · About</span>
-      <h2 style="margin:16px 0 18px">Technical depth,<br><span class="grad">business judgment.</span></h2>
-      <p class="lede">I’m studying Information Systems at BYU’s Marriott School (STEM-certified, graduating April 2027) in Provo, Utah. I like the moment a messy problem turns into a system that runs itself, and the conversation about whether it was worth it.</p>
-      <p class="lede">I’m looking for IT consulting and management consulting roles and internships. Long term, I want to grow from technical consulting into strategy.</p>
+  <article class="row reveal" id="homelab">
+    <div class="meta"><p class="label">06 &nbsp; 2026</p><p class="label">Self-hosted</p></div>
+    <div class="content">
+      <h2>Homelab</h2>
+      <p class="lead">Private AI tools I run on a Linux box at home: lecture recording with local transcription, a study library, and a hardened game server.</p>
+      <p class="body">Everything runs in Docker, uses AI models that run locally, and is reachable only over my private network. Each service is documented, backed up nightly and rebuildable from Git.</p>
+      <ul class="tags"><li>Docker</li><li>Linux</li><li>Tailscale</li><li>Whisper</li><li>Ollama</li><li>FastAPI</li></ul>
+      <div class="links"><a href="/homelab.html">See the homelab →</a></div>
+      <img class="shot" src="/assets/img/lab-classnotes.webp" alt="Class Notes, a self-hosted lecture recorder" loading="lazy" width="1400" height="875">
     </div>
-  </div>
-</section>
+  </article>
 
-<section class="contact" id="contact">
-  <div class="wrap">
-    <span class="eyebrow reveal">Let’s talk</span>
-    <h2 class="reveal" style="margin-top:16px">Hiring for consulting?<br><span class="grad">I’d love to meet.</span></h2>
-    <div class="hero-ctas reveal">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/willhollanddev/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://byu.joinhandshake.com/profiles/willhollanddev" target="_blank" rel="noopener">Handshake</a>
-      <a class="btn" href="https://github.com/wlholland" target="_blank" rel="noopener">GitHub</a>
+  <article class="row reveal" id="freeroomfinder">
+    <div class="meta"><p class="label">07 &nbsp; 2026</p><p class="label">Side project · BYU</p></div>
+    <div class="content">
+      <h2>FreeRoomFinder</h2>
+      <p class="lead">Finds empty BYU classrooms for any day and time window, so you can grab a quiet room to study or meet.</p>
+      <p class="body">It reads BYU’s published class schedules into SQLite and answers one question fast: which rooms are free right now, or at 3 p.m. on Thursday.</p>
+      <ul class="tags"><li>Python</li><li>SQLite</li><li>JavaScript</li><li>Web scraping</li></ul>
+      <div class="links"><a href="https://frf.willholland.dev" target="_blank" rel="noopener">Live site →</a><a href="https://github.com/wlholland/freeroomfinder" target="_blank" rel="noopener">GitHub →</a></div>
     </div>
-  </div>
-</section>
+  </article>
+</div>
+
+<div class="wrap">
+  <section class="row reveal" id="about">
+    <div class="meta"><p class="label accent">About</p></div>
+    <div class="content prose">
+      <h3 style="margin-bottom:18px">I like the moment a messy process turns into a system that runs itself.</h3>
+      <p>I’m studying Information Systems at BYU’s Marriott School (STEM-certified, graduating April 2027) and live in Provo. Most of my week goes to NetworkPC, the IT practice I run with my dad, and the rest goes to building things.</p>
+      <p>AI is how I learn and build fast. Judgment is still my job: I write the spec, check the output against the source, and measure whether it was worth it. That’s the part I want to keep doing, first in IT consulting and later in strategy.</p>
+      <p>Before BYU I served a two-year mission in St. Louis, where I led and trained more than 150 missionaries.</p>
+    </div>
+  </section>
+
+  <section class="row reveal" id="experience">
+    <div class="meta"><p class="label accent">Experience</p></div>
+    <div class="content" style="max-width:none">
+      <ul class="list">
+        <li><span class="role">IT Consultant &amp; Help Desk Lead <span class="org">· NetworkPC</span></span><span class="when">Oct 2024 – now</span>
+          <p class="desc">Microsoft 365 and Azure for five small-business clients: incident response, tenant hardening, email-compromise investigations, virtualized environments.</p></li>
+        <li><span class="role">MDM Implementation Intern <span class="org">· Thatcher Company</span></span><span class="when">Jun – Aug 2026</span>
+          <p class="desc">Intune and Autopilot across Windows and Android Enterprise: PowerShell remediation scripts, Win32 app packaging, update rings, Entra ID and Conditional Access.</p></li>
+        <li><span class="role">VDC Automation Specialist <span class="org">· Okland Construction</span></span><span class="when">Jun 2024 – Mar 2025</span>
+          <p class="desc">Taught myself C# and the Autodesk APIs with AI; built Navisworks add-ins, Python automations and a Revit-to-DWG pipeline that cut manual processing time by 80%.</p></li>
+        <li><span class="role">Help Desk Technician <span class="org">· BYU Dean’s Office</span></span><span class="when">Jan – Apr 2025</span>
+          <p class="desc">Supported 2,000+ Windows and macOS machines.</p></li>
+        <li><span class="role">Missionary, leader &amp; trainer <span class="org">· St. Louis, Missouri</span></span><span class="when">Dec 2021 – Dec 2023</span>
+          <p class="desc">Led and trained 150+ missionaries and ran social media outreach.</p></li>
+      </ul>
+      <dl class="skills" style="margin-top:56px">
+        <div><dt>Cloud &amp; identity</dt><dd>Microsoft 365, Entra ID, Intune, Autopilot, Conditional Access, Azure</dd></div>
+        <div><dt>Code</dt><dd>PowerShell, Python, C#, SQL, JavaScript / TypeScript, React</dd></div>
+        <div><dt>Systems</dt><dd>PostgreSQL, Windows, macOS, Linux, Docker, virtual machines</dd></div>
+        <div><dt>AI</dt><dd>Claude Code, OpenAI and Gemini APIs, local models (Ollama, Whisper)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="row reveal" id="contact">
+    <div class="meta"><p class="label accent">Contact</p></div>
+    <div class="content">
+      <h2 style="margin-bottom:14px">Let’s talk.</h2>
+      <p class="body">I’m looking for IT consulting and management consulting internships and roles. Based in Provo, Utah.</p>
+      <div class="contact-links"><a href="https://www.linkedin.com/in/willhollanddev/" target="_blank" rel="noopener">LinkedIn</a><a href="https://byu.joinhandshake.com/profiles/willhollanddev" target="_blank" rel="noopener">Handshake</a><a href="https://github.com/wlholland" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+  </section>
+</div>
 </main>
 
-<footer><div class="wrap"><span>© <span data-year>2026</span> Will Holland · Provo, Utah</span><span>Built with AI · hosted on Railway · works offline</span></div></footer>
-<a class="btn btn-sm present-link" href="/present.html" title="Full-screen presenter mode">▶ Presenter mode</a>
+<footer class="site-footer"><div class="wrap"><div class="row" style="padding:0"><span></span><p class="label">© <span data-year>2026</span> Will Holland</p></div></div></footer>
 </body>
 </html>
