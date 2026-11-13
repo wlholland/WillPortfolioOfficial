@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Homelab — Will Holland</title>
+  <meta name="description" content="Self-hosted AI tools Will Holland built and runs: lecture recording with local transcription and AI notes, a study library with streaks, a hardened game server with an admin panel, and more.">
+  <meta name="theme-color" content="#05070b">
+  <meta property="og:title" content="Will Holland’s homelab: private AI tools, self-hosted">
+  <meta property="og:image" content="https://willholland.dev/assets/img/og.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mono-mark">WH</span>Will Holland</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="/#ai">How I use AI</a>
+      <a href="/#work">Work</a>
+      <a href="/#consulting">Consulting</a>
+      <a href="/#experience">Experience</a>
+      <a href="/homelab.html" aria-current="page">Homelab</a>
+    </nav>
+    <a class="btn btn-sm btn-primary" href="https://www.linkedin.com/in/willhollanddev/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Homelab · self-hosted · built with AI</span>
+    <h1 class="display reveal" style="font-size:clamp(42px,7vw,88px)">Private AI tools<br><span class="grad">I run myself.</span></h1>
+    <p class="lede reveal">One Linux laptop, a dozen Docker containers, and AI models that run locally: no cloud bills, no data leaving the house. Everything is reachable only over my private network, documented, and backed up nightly.</p>
+  </div>
+</section>
+
+<section style="padding-top:64px">
+  <div class="wrap">
+    <figure class="diagram reveal" style="margin:0">
+      <svg viewBox="0 0 1000 300" role="img" aria-labelledby="lab-d">
+        <title id="lab-d">Phone and laptop connect over the private Tailscale network with HTTPS to an Ubuntu server running Docker apps and local AI models; the internet reaches only the game server, through a firewall.</title>
+        <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#76aaff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#76aaff"/></marker></defs>
+        <g font-size="14">
+          <rect x="10" y="40" width="170" height="64" rx="14" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.14)"/><text x="95" y="70" text-anchor="middle" fill="#fff" font-weight="700">📱 Phone</text><text x="95" y="90" text-anchor="middle" font-size="12">record · study · admin</text>
+          <rect x="10" y="130" width="170" height="64" rx="14" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.14)"/><text x="95" y="160" text-anchor="middle" fill="#fff" font-weight="700">💻 Laptop</text><text x="95" y="180" text-anchor="middle" font-size="12">browser, SSH</text>
+          <rect x="230" y="40" width="190" height="154" rx="16" fill="rgba(118,170,255,.08)" stroke="url(#lg)" stroke-width="1.5"/>
+          <text x="325" y="96" text-anchor="middle" fill="#fff" font-weight="700">🔒 Tailscale</text><text x="325" y="118" text-anchor="middle" font-size="12">private network</text><text x="325" y="136" text-anchor="middle" font-size="12">HTTPS · no open ports</text>
+          <path d="M180 72 L228 90 M180 162 L228 144" stroke="url(#lg)" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+          <rect x="470" y="20" width="520" height="200" rx="18" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.12)"/>
+          <text x="490" y="48" fill="#fff" font-weight="700">🐧 Ubuntu server · Docker</text>
+          <g font-size="12.5">
+            <rect x="490" y="64" width="150" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="565" y="89" text-anchor="middle">Class Notes</text>
+            <rect x="650" y="64" width="150" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="725" y="89" text-anchor="middle">Study Library</text>
+            <rect x="810" y="64" width="160" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="890" y="89" text-anchor="middle">Bedrock admin</text>
+            <rect x="490" y="114" width="150" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="565" y="139" text-anchor="middle">Canvas dashboard</text>
+            <rect x="650" y="114" width="150" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="725" y="139" text-anchor="middle">Speech-to-text</text>
+            <rect x="810" y="114" width="160" height="40" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.12)"/><text x="890" y="139" text-anchor="middle">n8n automations</text>
+            <rect x="490" y="164" width="480" height="40" rx="10" fill="rgba(167,139,250,.10)" stroke="rgba(167,139,250,.35)"/><text x="730" y="189" text-anchor="middle" fill="#e4dcff">🧠 Local AI: Whisper (speech-to-text) · Ollama qwen3 (notes)</text>
+          </g>
+          <path d="M420 117 L468 117" stroke="url(#lg)" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+          <rect x="230" y="236" width="190" height="52" rx="14" fill="rgba(255,90,80,.07)" stroke="rgba(255,120,110,.35)"/><text x="325" y="267" text-anchor="middle" font-size="13">🌍 Internet</text>
+          <path d="M420 262 C 600 262 860 262 890 222" stroke="#ff8a80" stroke-width="2" stroke-dasharray="5 5" fill="none" marker-end="url(#ar)"/>
+          <text x="560" y="254" font-size="12" fill="#ffb4ab">only the game port, through a rate-limiting firewall</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section style="padding-top:56px">
+  <div class="wrap">
+    <div class="lab-grid">
+      <article class="lab reveal">
+        <div class="shot"><img src="/assets/img/lab-classnotes.webp" alt="Class Notes home: class buttons to start recording, lecture list" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Built for my classes</span>
+          <h3>Class Notes</h3>
+          <p>Tap a class on your phone to record a lecture. Audio uploads while you record (nothing lost if the battery dies), a local Whisper model transcribes it, and a local LLM writes structured study notes. No cloud AI.</p>
+          <div class="chips"><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">MediaRecorder API</span><span class="chip ai">Whisper</span><span class="chip ai">Ollama · qwen3</span><span class="chip">Docker</span></div>
+        </div>
+      </article>
+      <article class="lab reveal">
+        <div class="shot"><img src="/assets/img/lab-library-flashcards.webp" alt="Study Library running a 200-term theology flashcard deck with saved progress" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">AI study tools, organized</span>
+          <h3>Study Library</h3>
+          <p>A home for the flashcards and quizzes I generate with Claude. It runs each one in a sandbox and implements Claude’s artifact storage API itself, so progress saves to my server and follows me across devices, with streaks, a heatmap and nightly backups to GitHub.</p>
+          <div class="chips"><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">JavaScript</span><span class="chip">CSP sandboxing</span><span class="chip ai">Claude artifacts</span><span class="chip">cron + git</span></div>
+        </div>
+      </article>
+      <article class="lab reveal">
+        <div class="shot"><img src="/assets/img/lab-minecraft.webp" alt="Bedrock server admin panel: players online, join instructions, broadcast, restart" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Public, so security matters</span>
+          <h3>Minecraft server + admin panel</h3>
+          <p>A Bedrock server friends can join from the internet or the apartment Wi-Fi, locked down in layers: one forwarded port, per-IP flood limits (IPv4 and IPv6), and a contained server process. Managed from a phone-friendly panel for players, permissions, settings and a live console.</p>
+          <div class="chips"><span class="chip">Docker</span><span class="chip">iptables</span><span class="chip">FastAPI</span><span class="chip">WebSockets</span><span class="chip">Tailscale</span></div>
+        </div>
+      </article>
+      <article class="lab reveal">
+        <div class="shot"><img src="/assets/img/lab-library.webp" alt="Study Library dashboard with streak, weekly minutes and activity heatmap" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Progress you can see</span>
+          <h3>Study streaks &amp; heatmap</h3>
+          <p>Every study session is tracked by time actually spent (idle time doesn’t count) and saves, rolled into a daily streak and an 18-week heatmap, and summarized in a readable report committed to GitHub every night.</p>
+          <div class="chips"><span class="chip">Activity tracking</span><span class="chip">Data visualization</span><span class="chip">Automation</span></div>
+        </div>
+      </article>
+      <article class="lab reveal">
+        <div class="shot text-art"><div style="text-align:center"><div style="font-size:54px">📚🤖</div><p class="muted" style="margin-top:10px">Canvas → n8n → SQLite → dashboard + MCP</p></div></div>
+        <div class="body">
+          <span class="tag">Never miss a due date</span>
+          <h3>Canvas dashboard + AI connector</h3>
+          <p>A daily n8n job syncs my BYU Canvas assignments into a private dashboard, and an MCP server lets an AI assistant answer “what’s due this week?” from the same data.</p>
+          <div class="chips"><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">n8n</span><span class="chip ai">MCP server</span><span class="chip">Docker</span></div>
+        </div>
+      </article>
+      <article class="lab reveal">
+        <div class="shot text-art"><div style="text-align:center"><div style="font-size:54px">🎙️</div><p class="muted" style="margin-top:10px">Phone / PC dictation → private Whisper server</p></div></div>
+        <div class="body">
+          <span class="tag">Dictation without the cloud</span>
+          <h3>Private speech-to-text</h3>
+          <p>An OpenAI-compatible Whisper server for dictation from my phone and Windows PC: fast, accurate and free, with audio that never leaves my network.</p>
+          <div class="chips"><span class="chip ai">faster-whisper</span><span class="chip">OpenAI-compatible API</span><span class="chip">Docker</span><span class="chip">Tailscale</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tile reveal" style="margin-top:18px;padding:28px">
+      <span class="eyebrow">How it’s run</span>
+      <h3 style="margin:12px 0 10px;font-size:24px">Operated like a real environment</h3>
+      <div class="approach" style="margin-top:14px">
+        <p class="muted" style="margin:0">🔒 <b style="color:var(--ink)">Private by default:</b> apps bind to localhost; access only through Tailscale with HTTPS.</p>
+        <p class="muted" style="margin:0">♻️ <b style="color:var(--ink)">Self-healing:</b> containers restart on crash and boot; queues recover after restarts.</p>
+        <p class="muted" style="margin:0">📘 <b style="color:var(--ink)">Documented:</b> every service has a rebuild runbook and decision log in Git.</p>
+        <p class="muted" style="margin:0">💾 <b style="color:var(--ink)">Backed up:</b> nightly exports to GitHub; world and data backups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2 class="reveal">Want the full story?</h2>
+    <div class="hero-ctas reveal"><a class="btn btn-primary" href="/#work">Back to the work</a><a class="btn" href="https://www.linkedin.com/in/willhollanddev/" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span data-year>2026</span> Will Holland · Provo, Utah</span><span>Built with AI · hosted on Railway · works offline</span></div></footer>
+</body>
+</html>
