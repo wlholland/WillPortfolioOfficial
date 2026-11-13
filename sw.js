@@ -1,6 +1,6 @@
 // Offline support: precache the whole site so it runs with no Wi-Fi (career-fair table).
 // Regenerate the list + bump VERSION when files change: node scripts/build-sw.mjs
-const VERSION = "wh-202611132119";
+const VERSION = "wh-202611132240";
 const PRECACHE = [
   "/",
   "/assets/css/present.css",
