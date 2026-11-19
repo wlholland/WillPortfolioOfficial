@@ -41,6 +41,12 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); letter-spacing: -.015em; line-height: 
 .site-nav { display: flex; gap: 6px; }
 .site-nav a { font-size: 11px; letter-spacing: .15em; text-transform: uppercase; text-decoration: none; color: var(--ink); padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; transition: border-color .2s; }
 .site-nav a:hover, .site-nav a[aria-current=page] { border-color: rgba(255, 255, 255, .45); }
+/* Presenter-mode button (bottom right; hidden on phones) */
+.present-link { position: fixed; right: 20px; bottom: 20px; z-index: 40; font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+  text-decoration: none; color: var(--ink); padding: 9px 15px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(0, 0, 0, .6); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: border-color .2s; }
+.present-link:hover { border-color: var(--accent); }
+@media (max-width: 700px) { .present-link { display: none; } }
 
 /* hero */
 .hero { position: relative; min-height: 100svh; display: grid; place-items: center; text-align: center; overflow: hidden; }
