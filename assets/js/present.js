@@ -5,6 +5,8 @@
   const bar = document.getElementById("bar");
   const count = document.getElementById("count");
   const pauseBtn = document.getElementById("pause");
+  const qrImg = document.getElementById("qrImg");
+  const qrCap = document.getElementById("qrCap");
   const DWELL = 10000; // ms per slide
   let i = 0, paused = false, start = performance.now(), elapsed = 0, idleTimer;
 
@@ -12,6 +14,11 @@
     i = (n + slides.length) % slides.length;
     slides.forEach((s, k) => s.classList.toggle("on", k === i));
     document.body.classList.toggle("qr-hidden", slides[i].classList.contains("s-cover"));
+    // Corner QR: the product's own link when the slide has one, else the site.
+    const qr = slides[i].dataset.qr, label = slides[i].dataset.qrLabel;
+    qrImg.src = qr || "/assets/img/qr-site.svg";
+    qrImg.alt = qr ? `QR code: ${label}` : "QR code to willholland.dev";
+    qrCap.textContent = qr ? `Scan · ${label}` : "willholland.dev";
     count.textContent = `${i + 1} / ${slides.length}`;
     start = performance.now(); elapsed = 0;
   }

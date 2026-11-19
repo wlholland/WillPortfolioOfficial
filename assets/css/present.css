@@ -36,7 +36,9 @@ body.present { overflow: hidden; height: 100vh; height: 100dvh; }
 .hud-row button:hover, .hud-row a:hover { color: var(--ink); }
 body.idle .hud { opacity: .3; }
 .qr-corner { position: fixed; right: 3vw; top: 4vh; z-index: 10; margin: 0; }
-.qr-corner img { width: clamp(70px, 6vw, 104px); background: #fff; padding: 5px; border-radius: 6px; }
+.qr-corner { display: grid; gap: 8px; justify-items: center; }
+.qr-corner img { width: clamp(96px, 9vw, 160px); background: #fff; padding: 6px; border-radius: 8px; }
+.qr-corner figcaption { font-size: clamp(10px, .85vw, 13px); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 body.qr-hidden .qr-corner { display: none; }
 
 @media (max-width: 760px) {

@@ -9,10 +9,10 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=202611190046">
-  <link rel="stylesheet" href="/assets/css/present.css?v=202611190046">
-  <script src="/assets/js/site.js?v=202611190046" defer></script>
-  <script src="/assets/js/present.js?v=202611190046" defer></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=202611190055">
+  <link rel="stylesheet" href="/assets/css/present.css?v=202611190055">
+  <script src="/assets/js/site.js?v=202611190055" defer></script>
+  <script src="/assets/js/present.js?v=202611190055" defer></script>
 </head>
 <body class="present">
 <canvas id="waves" aria-hidden="true"></canvas>
@@ -28,7 +28,7 @@
     <figure class="qr"><img src="/assets/img/qr-site.svg" alt="QR code to willholland.dev"><figcaption>willholland.dev</figcaption></figure>
   </section>
 
-  <section class="slide">
+  <section class="slide" data-qr="/assets/img/qr-pmp.svg" data-qr-label="App Store">
     <p class="label accent">01 &nbsp; Post-Mission Planner</p>
     <div class="split">
       <div>
@@ -50,7 +50,7 @@
     </ol>
   </section>
 
-  <section class="slide">
+  <section class="slide" data-qr="/assets/img/qr-frf.svg" data-qr-label="Live site">
     <p class="label accent">03 &nbsp; FreeRoomFinder · side project</p>
     <div class="split">
       <div>
@@ -62,7 +62,7 @@
   </section>
 
   <section class="slide">
-    <p class="label accent">04 &nbsp; Okland Construction · VDC automation</p>
+    <p class="label accent">04 &nbsp; Autodesk Navisworks and Revit · Okland Construction</p>
     <h2>I barely knew how to code. AI taught me C#, and I shipped plugins the team used.</h2>
     <dl class="metrics big-metrics">
       <div><dt>Hello World → working plugin</dt><dd>3 days</dd></div>
@@ -71,7 +71,7 @@
     </dl>
   </section>
 
-  <section class="slide">
+  <section class="slide" data-qr="/assets/img/qr-doorway.svg" data-qr-label="Live demo">
     <p class="label accent">05 &nbsp; Doorway · hackathon, 2nd place</p>
     <div class="split">
       <div>
@@ -82,7 +82,7 @@
     </div>
   </section>
 
-  <section class="slide">
+  <section class="slide" data-qr="/assets/img/qr-vibesec.svg" data-qr-label="Demo video">
     <p class="label accent">06 &nbsp; VibeSec · hackathon</p>
     <h2>Security for AI-written code.</h2>
     <ol class="steps">
@@ -93,7 +93,7 @@
     </ol>
   </section>
 
-  <section class="slide">
+  <section class="slide" data-qr="/assets/img/qr-homelab.svg" data-qr-label="Homelab page">
     <p class="label accent">07 &nbsp; Homelab</p>
     <h2>Private AI tools I run at home.</h2>
     <div class="trio wide"><img src="/assets/img/lab-classnotes.webp" alt=""><img src="/assets/img/lab-library-flashcards.webp" alt=""><img src="/assets/img/lab-minecraft.webp" alt=""></div>
@@ -119,6 +119,6 @@
     <button class="label" id="fs" type="button">Full screen</button>
   </div>
 </div>
-<figure class="qr-corner"><img src="/assets/img/qr-site.svg" alt="QR code to willholland.dev"></figure>
+<figure class="qr-corner"><img id="qrImg" src="/assets/img/qr-site.svg" alt="QR code"><figcaption id="qrCap">willholland.dev</figcaption></figure>
 </body>
 </html>
