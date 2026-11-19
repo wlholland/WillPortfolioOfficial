@@ -102,6 +102,20 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); letter-spacing: -.015em; line-height: 
 .skills dt { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); padding-top: 4px; }
 .skills dd { margin: 0; color: var(--text); font-size: 15px; }
 
+/* How I work: Kolbe A Index scores (1–10), text and bars only */
+.kolbe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin: 4px 0 34px; }
+.kolbe div { display: grid; gap: 8px; align-content: start; }
+.kolbe dt { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
+.kolbe dd { margin: 0; }
+.kolbe .score { font-size: 40px; font-weight: 300; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+.kolbe .score span { font-size: 13px; color: var(--faint); letter-spacing: 0; margin-left: 2px; }
+.kolbe .bar { height: 3px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.kolbe .bar i { display: block; height: 100%; width: calc(var(--s) * 10%); background: rgba(255, 255, 255, .55); }
+.kolbe .bar.init i { background: var(--accent); }
+.kolbe .mode { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.kolbe .mode.init { color: var(--accent); }
+.body strong { color: var(--ink); font-weight: 500; }
+
 .prose p { color: var(--muted); font-size: 15.5px; line-height: 1.75; margin: 0 0 18px; }
 .prose a { color: var(--text); text-decoration-color: rgba(255, 255, 255, .35); text-underline-offset: 3px; }
 .contact-links { display: flex; gap: 18px; font-size: 14px; }
@@ -126,6 +140,7 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); letter-spacing: -.015em; line-height: 
   .row .meta { grid-auto-flow: column; justify-content: start; gap: 18px; padding-top: 0; }
   .lab { grid-template-columns: 1fr; gap: 24px; padding: 64px 0; }
   .skills div { grid-template-columns: 1fr; gap: 6px; }
+  .kolbe { grid-template-columns: repeat(2, 1fr); gap: 26px 28px; }
   .site-nav a:not(.keep) { display: none; }
   .shots { grid-template-columns: repeat(3, 1fr); gap: 6px; }
   .corner { display: none; }
