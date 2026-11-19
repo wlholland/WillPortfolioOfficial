@@ -91,20 +91,29 @@ void main() {
   float dist = length(fromPtr);
   vec2 outward = fromPtr / (dist + 1e-4);
   float nearPtr = smoothstep(0.0, 0.05, dist);  // no pinhole right under the cursor
-  vec2 bend = outward * sin(dist * 26.0 - uTime * 3.6) * exp(-dist * 4.0) * 0.016 * uHover * nearPtr;
-  bend -= fromPtr * exp(-dist * dist * 24.0) * 0.10 * uHover;  // gentle lens: lines swell around the pointer
+  vec2 bend = outward * sin(dist * 24.0 - uTime * 3.6) * exp(-dist * 3.2) * 0.026 * uHover * nearPtr;
+  bend -= fromPtr * exp(-dist * dist * 12.0) * 0.22 * uHover;  // lens: lines swell and part around the pointer
 
-  // A shockwave ring for each recent click: grows, thins and fades.
+  // A ripple for each recent click. Not a perfect circle: the front wobbles with
+  // direction (a different shape per click), travels faster some ways than
+  // others, is stronger on some sides, and trails a few smaller crests, moving
+  // the lines mostly up and down so it runs *through* them like water.
   float ring = 0.0;
   for (int i = 0; i < 6; i++) {
     float age = uTime - uTaps[i].z;
     if (age >= 0.0 && age < 3.0) {
       vec2 c = (v - uTaps[i].xy) * aspect;
       float r = length(c);
-      float edge = (r - age * 0.8) * 16.0;
-      float strength = exp(-edge * edge) * exp(-age * 1.5) * smoothstep(0.0, 0.03, r);
-      bend += c / (r + 1e-4) * strength * 0.05;
-      ring += strength;
+      float ang = atan(c.y, c.x);
+      float seed = fract(sin(dot(uTaps[i].xy, vec2(127.1, 311.7))) * 43758.5453) * 6.2831;
+      float wob = 0.10 * sin(ang * 3.0 + seed) + 0.06 * sin(ang * 5.0 - seed * 1.7 + age * 1.5)
+                + 0.04 * sin(ang * 8.0 + seed * 2.3);
+      float d = r - age * 0.72 * (1.0 + wob);                         // >0 ahead of the front, <0 behind
+      float env = exp(-max(d, 0.0) * 30.0) * exp(min(d, 0.0) * 6.0);  // sharp front, longer tail
+      float amp = (0.55 + 0.45 * sin(ang * 2.0 + seed * 1.3 + age)) * exp(-age * 1.3) * smoothstep(0.0, 0.04, r);
+      float wave = sin(d * 42.0) * env * amp;
+      bend += vec2(0.25 * c.x / (r + 1e-4), 1.0) * wave * 0.032;
+      ring += abs(wave);
     }
   }
 
